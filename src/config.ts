@@ -5,7 +5,7 @@ import type { ProductKey, Product } from './types';
 // ─────────────────────────────────────────────────────
 
 /** WhatsApp нөмірі (елдің коды + нөмір, + жоқ) */
-export const WHATSAPP_NUMBER = '77000000000';
+export const WHATSAPP_NUMBER = '+77059829273';
 
 /**
  * Cloudinary тегін аккаунт керек → cloudinary.com
@@ -13,8 +13,8 @@ export const WHATSAPP_NUMBER = '77000000000';
  *  2) Settings → Upload → Upload presets → Add preset
  *     Signing Mode = "Unsigned" → сақта → атын көшір
  */
-export const CLOUDINARY_CLOUD_NAME = 'YOUR_CLOUD_NAME';
-export const CLOUDINARY_UPLOAD_PRESET = 'YOUR_UPLOAD_PRESET';
+export const CLOUDINARY_CLOUD_NAME = 'dsrjeskbh';
+export const CLOUDINARY_UPLOAD_PRESET = 'tapsyrys';
 
 // ─────────────────────────────────────────────────────
 //  Өнімдер мен бағалар

@@ -126,6 +126,13 @@ function renderApp(): void {
           </div>
 
           <button class="btn-order" id="btn-order">📲 Тапсырыс беру (WhatsApp)</button>
+          <div style="text-align:center;margin-top:10px;font-size:11px;color:#5A6E88;line-height:1.6">
+            Тапсырыс беру арқылы сіз
+            <a href="/terms.html" target="_blank" style="color:#7C92AC;">Қызмет шарттарымен</a>
+            және
+            <a href="/privacy.html" target="_blank" style="color:#7C92AC;">Құпиялылық саясатымен</a>
+            келісесіз
+          </div>
           <div class="result__note">
             Бағалар шамамен көрсетілген, нақты баға тапсырыс растағанда белгіленеді
           </div>
@@ -135,6 +142,8 @@ function renderApp(): void {
       <footer style="text-align:center;padding:28px 0 8px;font-size:12px;color:#AAA;">
         © ${new Date().getFullYear()} seriktesbol.com &nbsp;·&nbsp;
         <a href="/privacy.html" style="color:#A8A296;text-decoration:none;">Құпиялылық саясаты</a>
+        &nbsp;·&nbsp;
+        <a href="/terms.html" style="color:#A8A296;text-decoration:none;">Қызмет шарттары</a>
       </footer>
     </main>
   `;
