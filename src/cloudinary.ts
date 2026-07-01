@@ -5,19 +5,20 @@ export interface UploadResult {
 }
 
 export async function uploadImage(file: File): Promise<UploadResult> {
-  if (
-    CLOUDINARY_CLOUD_NAME === 'YOUR_CLOUD_NAME' ||
-    CLOUDINARY_UPLOAD_PRESET === 'YOUR_UPLOAD_PRESET'
-  ) {
+  // Placeholder тексеру — string-ке cast ету арқылы TS2367 қатесін болдырмаймыз
+  const cloudName = CLOUDINARY_CLOUD_NAME as string;
+  const preset = CLOUDINARY_UPLOAD_PRESET as string;
+
+  if (cloudName === 'YOUR_CLOUD_NAME' || preset === 'YOUR_UPLOAD_PRESET') {
     throw new Error('Cloudinary баптаулары толтырылмаған (config.ts файлын қара)');
   }
 
   const fd = new FormData();
   fd.append('file', file);
-  fd.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+  fd.append('upload_preset', preset);
 
   const res = await fetch(
-    `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`,
+    `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
     { method: 'POST', body: fd }
   );
 
