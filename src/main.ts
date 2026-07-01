@@ -43,6 +43,7 @@ function renderApp(): void {
       <!-- Product tabs -->
       <div class="tabs" id="tabs"></div>
 
+
       <div class="grid">
         <!-- Left column -->
         <div>
@@ -130,6 +131,11 @@ function renderApp(): void {
           </div>
         </div>
       </div>
+
+      <footer style="text-align:center;padding:28px 0 8px;font-size:12px;color:#AAA;">
+        © ${new Date().getFullYear()} seriktesbol.com &nbsp;·&nbsp;
+        <a href="/privacy.html" style="color:#A8A296;text-decoration:none;">Құпиялылық саясаты</a>
+      </footer>
     </main>
   `;
 }

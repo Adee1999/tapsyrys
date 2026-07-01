@@ -1,0 +1,18 @@
+{
+  "name": "Тапсырыс беру — seriktesbol.com",
+  "short_name": "Тапсырыс",
+  "description": "Баннер, стенд басып шығаруға тапсырыс беру",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F0EDE6",
+  "theme_color": "#16202E",
+  "lang": "kk",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

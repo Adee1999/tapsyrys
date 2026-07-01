@@ -3,12 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Баннер, стенд басып шығаруға тапсырыс беру — seriktesbol.com" />
-    <title>Тапсырыс беру | seriktesbol.com</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- ── Primary SEO ── -->
+    <title>Баннер, Стенд Тапсырысы | seriktesbol.com</title>
+    <meta name="description"
+      content="Баннер және стенд басып шығаруға онлайн тапсырыс беріңіз. Бағасы бірден көрінеді, тапсырыс WhatsApp арқылы жіберіледі." />
+    <meta name="keywords"
+      content="баннер тапсырыс, стенд басып шығару, типография, баннер бағасы, seriktesbol" />
+    <meta name="author" content="seriktesbol.com" />
+    <link rel="canonical" href="https://tapsyrys.seriktesbol.com/" />
+
+    <!-- ── Open Graph (WhatsApp, Telegram preview) ── -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://tapsyrys.seriktesbol.com/" />
+    <meta property="og:title"       content="Баннер, Стенд Тапсырысы | seriktesbol.com" />
+    <meta property="og:description" content="Бағасы бірден есептеледі. WhatsApp арқылы тапсырыс беріңіз." />
+    <meta property="og:image"       content="https://tapsyrys.seriktesbol.com/og-image.png" />
+    <meta property="og:locale"      content="kk_KZ" />
+    <meta property="og:site_name"   content="seriktesbol.com" />
+
+    <!-- ── Twitter Card ── -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="Баннер, Стенд Тапсырысы" />
+    <meta name="twitter:description" content="Бағасы бірден есептеледі. WhatsApp арқылы тапсырыс беріңіз." />
+
+    <!-- ── Icons ── -->
+    <link rel="icon"             type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest"         href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#16202E" />
+
+    <!-- ── Robots ── -->
+    <meta name="robots" content="index, follow" />
   </head>
   <body>
     <div id="app"></div>
+
+    <!-- Cookie баннері -->
+    <div id="cookie-banner" style="
+      display:none;
+      position:fixed; bottom:0; left:0; right:0;
+      background:#16202E; color:#ccc;
+      padding:14px 20px;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; z-index:999;
+      font-family:-apple-system,sans-serif; font-size:13px;
+      box-shadow:0 -2px 12px rgba(0,0,0,.25);
+    " id="cookie-bar">
+      <span>
+        🍪 Сайт техникалық cookie файлдарын пайдаланады.
+        <a href="/privacy.html" style="color:#E0A52E; margin-left:4px">Толығырақ</a>
+      </span>
+      <button onclick="acceptCookie()" style="
+        background:#E0A52E; color:#16202E;
+        border:none; border-radius:8px;
+        padding:8px 18px; font-size:13px; font-weight:800;
+        cursor:pointer; flex-shrink:0;
+      ">Жарайды</button>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
+
+    <script>
+      // Cookie баннерін бір рет ғана көрсету
+      (function() {
+        if (!localStorage.getItem('cookie_ok')) {
+          document.getElementById('cookie-bar').style.display = 'flex';
+        }
+      })();
+      function acceptCookie() {
+        localStorage.setItem('cookie_ok', '1');
+        document.getElementById('cookie-bar').style.display = 'none';
+      }
+    </script>
   </body>
 </html>
